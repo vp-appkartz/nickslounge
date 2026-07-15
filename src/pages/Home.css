@@ -41,12 +41,6 @@
   padding-top: 10vh;
 }
 
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
-}
-
 .hero-title-massive {
   font-family: var(--font-serif);
   font-size: clamp(5rem, 10vw, 12rem);
