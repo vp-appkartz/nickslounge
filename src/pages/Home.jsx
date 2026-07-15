@@ -35,10 +35,10 @@ const Home = () => {
       <section className="hero-immersive">
         <motion.div 
           className="hero-bg"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 2, ease: "easeOut" }}
-          style={{ backgroundImage: `url('/media/hero-dark.jpg')`, y: yParallaxSlow }}
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.15 }}
+          transition={{ duration: 25, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
+          style={{ backgroundImage: `url('/media/hero-dark.webp')`, y: yParallaxSlow }}
         />
         <div className="hero-gradient"></div>
         <div className="container hero-content-immersive">
