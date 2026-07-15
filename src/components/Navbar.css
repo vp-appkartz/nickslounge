@@ -1,0 +1,155 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: all var(--transition-slow);
+}
+
+.navbar.scrolled {
+  background-color: rgba(10, 10, 10, 0.85); /* Dark background with opacity */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
+  height: 90px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 90px;
+  width: auto;
+  border-radius: 4px;
+  transition: all var(--transition-normal);
+}
+
+.navbar.scrolled .nav-logo {
+  height: 70px;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: var(--gold-accent);
+}
+
+.nav-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--gold-accent);
+  border-radius: 2px;
+}
+
+/* Light text modifiers for transparent hero header */
+.navbar.light-text .brand {
+  color: white;
+}
+
+.navbar.light-text .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+
+}
+
+.navbar.light-text .nav-link:hover {
+  color: white;
+}
+
+.navbar.light-text .mobile-toggle {
+  color: white;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-nav-overlay {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  right: 0;
+  background-color: var(--surface-color);
+  z-index: 999;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.navbar.scrolled ~ .mobile-nav-overlay {
+  top: 70px;
+}
+
+.mobile-nav {
+  padding: 2rem;
+  height: 100%;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-nav-link {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  display: block;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: block;
+  }
+}
